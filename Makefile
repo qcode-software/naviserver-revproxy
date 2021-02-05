@@ -9,7 +9,7 @@ REMOTE_DIR=deb.qcode.co.uk
 
 .PHONY: all
 
-all: check-version package clean
+all: check-version package upload clean
 package: check-version
 	# Copy files to pristine temporary directory
 	rm -rf $(TEMP_PATH)
