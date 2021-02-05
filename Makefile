@@ -18,7 +18,7 @@ package: check-version
 	tar --strip-components=1 --exclude Makefile --exclude description-pak --exclude README.md \
 	-xzvf v$(VERSION).tar.gz -C $(TEMP_PATH)
 	# checkinstall
-	fakeroot checkinstall -d2 -D --deldoc --backup=no --install=no --pkgname=$(DPKG_NAME) --pkgversion=$(VERSION) --pkgrelease=$(RELEASE) --pkglicense="BSD" -A all -y --maintainer $(MAINTAINER) --reset-uids=yes --requires="naviserver\(\>=4.99.20\),nsf,nsf-shells" --replaces none --conflicts none make install
+	fakeroot checkinstall -D --deldoc --backup=no --install=no --pkgname=$(DPKG_NAME) --pkgversion=$(VERSION) --pkgrelease=$(RELEASE) --pkglicense="BSD" -A all -y --maintainer $(MAINTAINER) --reset-uids=yes --requires="naviserver\(\>=4.99.20\),nsf,nsf-shells" --replaces none --conflicts none make install
 
 install:
 	mkdir -p $(INSTALL_PATH)
